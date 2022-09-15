@@ -1,3 +1,5 @@
+package Java;
+
 public class Hash3 {
     public static int solution(String[][] clothes) {
         int answer = 0;

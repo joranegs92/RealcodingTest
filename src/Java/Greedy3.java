@@ -1,3 +1,5 @@
+package Java;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,7 +22,7 @@ public class Greedy3 {
         return st.toString();
 
         /*
-        몇번째인지 알았으니 그 다음것부터 남은 갯수만큼 
+        몇번째인지 알았으니 그 다음것부터 남은 갯수만큼
         * */
 
     }

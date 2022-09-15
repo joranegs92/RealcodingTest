@@ -1,3 +1,5 @@
+package Java;
+
 public class Greedy2 {
 
     public static int solution(String name) {

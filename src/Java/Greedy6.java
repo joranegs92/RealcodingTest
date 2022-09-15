@@ -1,3 +1,5 @@
+package Java;
+
 public class Greedy6 {
     /*조이스틱*/
     public int solution(String name) {

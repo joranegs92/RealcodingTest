@@ -1,3 +1,5 @@
+package Java;
+
 public class kakak2020 {
 
         public static String solution(int[] numbers, String hand) {
