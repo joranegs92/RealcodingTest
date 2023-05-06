@@ -1,4 +1,4 @@
-package Java;
+package Java.해쉬;
 
 public class Hash3 {
     public static int solution(String[][] clothes) {

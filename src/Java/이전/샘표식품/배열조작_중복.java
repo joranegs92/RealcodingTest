@@ -1,9 +1,14 @@
-package Java;
 /*
-* */
+package Java.이전.샘표식품;
+
+*/
+/*
+* *//*
+
 public class 배열조작_중복 {
 
-    ppublic int[] solution(int[] a, int[] b) {
+  */
+/*  public int[] solution(int[] a, int[] b) {
         int[] c = {};
         int z = 0;
         for(int i= 0; i< a.length; i++){
@@ -23,6 +28,8 @@ public class 배열조작_중복 {
         int[] b = {2,3,3,4,5};
         int[] result = main.solution(a,b);
 
-        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(result));*//*
+
     }
 }
+*/

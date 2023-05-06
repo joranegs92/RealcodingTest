@@ -1,6 +1,4 @@
-package 스택.큐;
-
-import Java.Main;
+package Java.이전.큐;
 
 import java.util.ArrayList;
 import java.util.Arrays;

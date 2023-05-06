@@ -1,4 +1,4 @@
-package samphyo;
+package Java.이전.samphyo;
 
 import java.util.Arrays;
 

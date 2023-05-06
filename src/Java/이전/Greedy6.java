@@ -1,4 +1,4 @@
-package Java;
+package Java.이전;
 
 public class Greedy6 {
     /*조이스틱*/
