@@ -8,17 +8,24 @@ public class 올바른괄호 {
 
 		Stack<String> stack = new Stack<>();
 		for(int i =0 ; i< s.length();i++) {
-			stack.push(s.substring(i,i+1));
+			if(s.charAt(i)=='('){
+				stack.push("(");
+			}
+			else if(s.charAt(i) == ')'){
+				if(stack.isEmpty()){
+					return false;
+				}else {
+					stack.pop();
+				}
+			}
 
+			System.out.println(stack);
 		}
-		System.out.println(stack);
-		String test = stack.pop();
 
-		System.out.println(test);
-		return answer;
+		return stack.isEmpty();
 	}
 	public static void main(String[] args){
-		String s = "(((()";
+		String s = "(())()";
 		solution(s);
 	}
 }
