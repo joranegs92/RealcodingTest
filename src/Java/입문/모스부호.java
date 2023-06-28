@@ -23,7 +23,7 @@ public class 모스부호 {
 		System.out.println(Arrays.toString(morseSpace));
 		for(int i =0 ;i< morseSpace.length; i++) {
 			for(int j = 0; j< morse.length; j++){
-
+				
 			}
 		}
 
