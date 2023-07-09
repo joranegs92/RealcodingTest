@@ -30,6 +30,8 @@ public class backjun1940 {
 		int count = 0;
 		int i =0;
 		int j = n-1;
+
+
 		while (i<j){
 			if(nBox[i]+nBox[j]<m) {
 				i++;
