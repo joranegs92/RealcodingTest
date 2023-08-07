@@ -1,4 +1,4 @@
-package Java.백준;
+package Java.백준.정렬;
 
 import java.util.Scanner;
 
