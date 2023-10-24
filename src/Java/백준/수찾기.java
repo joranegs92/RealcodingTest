@@ -16,7 +16,9 @@ public class 수찾기 {
 
 		int M =sc.nextInt();
 		for(int i =0; i<M;i++){
+
 			boolean find = false;
+
 			int target = sc.nextInt();
 			//이진탐색 시작
 			int start =0;
