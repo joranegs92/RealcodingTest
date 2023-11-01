@@ -31,6 +31,7 @@ public class 기타레슨이진탐색 {
 		int start = 0;
 		int end = 0;
 
+
 		for (int i = 0; i < N; i++) {
 			A[i] = sc.nextInt();
 			if (start<A[i]) start = A[i];
@@ -38,11 +39,27 @@ public class 기타레슨이진탐색 {
 		}
 
 		while (start<= end){
+
 			int mid = (start+end)/2 ;
 			int sum = 0;
-			for(int i=0; i<A.length; i++){
-				
+			int count = 0;
+			for(int i=0; i<N; i++){
+				if(sum +A[i]>mid){
+					count++;
+					sum =0;
+				}
+				sum =sum+A[i];
 			}
+			//m = 3
+			if(sum !=0) count++;
+
+			if(count>M){
+				start = mid+1;
+			}else{
+				end = mid -1;
+			}
+
 		}
+		System.out.println(start);
 	}
 }
