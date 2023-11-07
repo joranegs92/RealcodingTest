@@ -1,4 +1,4 @@
-package Java;
+package Java.프로그래머스new;
 
 import java.util.HashSet;
 

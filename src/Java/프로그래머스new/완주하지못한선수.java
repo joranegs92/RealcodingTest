@@ -1,3 +1,5 @@
+package Java.프로그래머스new;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -10,26 +12,26 @@ public class 완주하지못한선수 {
 	*
 	* 2.
 	* */
-	public static void main(String[] args) {
-
-		String[] participant = {"leo", "kiki", "eden"};
-		String[] completion = { "kiki", "eden"};
-
-		Arrays.sort(participant);
-		Arrays.sort(completion);
-		String answer = "";
-
-		for(int i = 0; i<completion.length;i++){
-			if(!completion[i].equals(participant[i])){
-				answer = participant[i];
-				break ;
-			}
-		}
-
-		if(answer == ""){
-			answer = participant[participant.length-1];
-		}
-	}
+//	public static void main(String[] args) {
+//
+//		String[] participant = {"leo", "kiki", "eden"};
+//		String[] completion = { "kiki", "eden"};
+//
+//		Arrays.sort(participant);
+//		Arrays.sort(completion);
+//		String answer = "";
+//
+//		for(int i = 0; i<completion.length;i++){
+//			if(!completion[i].equals(participant[i])){
+//				answer = participant[i];
+//				break ;
+//			}
+//		}
+//
+//		if(answer == ""){
+//			answer = participant[participant.length-1];
+//		}
+//	}
 
 	/*
 	* 해시맵을 사용할것임
