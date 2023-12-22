@@ -44,7 +44,7 @@ public class 조이스틱 {
 		answer += move;
 		System.out.println( answer);
 /*		while (al.isEmpty()){
-			//Z, A면 무조건 1만 이동함
+			//Z, A면 무조건 1만 이동함 이동
 			//
 
 			if()
