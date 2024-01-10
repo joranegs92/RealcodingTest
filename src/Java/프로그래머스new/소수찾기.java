@@ -48,4 +48,13 @@ public class 소수찾기 {
 		String num = "17";
 		solution(num);
 	}
+	public void test2(String test,String num,Set<Integer> set){
+		if(!test.isEmpty()){
+			set.add(Integer.parseInt(test));
+		}
+		for(int i = 0;i<num.length();i++){
+
+			test(test+num.charAt(i),num.substring(0,i)+num.substring(i+1),set);
+		}
+	}
 }
