@@ -27,15 +27,24 @@ public class 단어변환 {
 		queue.add(begin);
 		while (!queue.isEmpty()) {
 			now = queue.poll();
+
 			for (int i=0; i<words.length; i++){
 				for(int j=0;j<words[i].length();j++){
 					if (now.charAt(j)==words[i].charAt(j)&&visited[i]==0){
 						visited[i]=1;
-						System.out.println(now.charAt(j)+"="+words[i].charAt(j));
+
 						queue.add(words[i]);
 						j=0;
 						break;
 					}
+
+
+				}
+				//같은글자가 없으면
+				System.out.println(words[i]+"="+queue.contains(words[i]));
+				if(chech(now,words[i])&&queue.contains(words[i])){
+					System.out.println(chech(now,words[i]));
+					queue.remove(words[i]);
 				}
 			}
 			count++;
@@ -43,7 +52,15 @@ public class 단어변환 {
 				break;
 			}
 		}
-
+	}
+	public static boolean chech(String begin, String target){
+		for(int i=0;i<begin.length();i++){
+			if (begin.charAt(i)==target.charAt(i)){
+				//같은 글자가 잇음
+				return false;
+			}
+		}
+		return true;
 	}
 	public static void dfs(String begin){
 
