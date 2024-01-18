@@ -19,48 +19,40 @@ public class 단어변환 {
 
 		return answer;
 	}
-	public static void bfs(String begin, String target, String[] words){
-		String now = "";//현재 단어
+	public static int bfs(String begin, String target, String[] words){
+
 		int count = 0;//변환횟수
 		visited = new int[words.length];
 		Queue<String> queue = new LinkedList<>();
 		queue.add(begin);
 		while (!queue.isEmpty()) {
-			now = queue.poll();
+			int size = queue.size();
 
-			for (int i=0; i<words.length; i++){
-				for(int j=0;j<words[i].length();j++){
-					if (now.charAt(j)==words[i].charAt(j)&&visited[i]==0){
-						visited[i]=1;
+			for (int a=0;a<size;a++){
+				String now = queue.poll();
 
-						queue.add(words[i]);
-						j=0;
-						break;
-					}
-
-
+				if (now.equals(target)){
+					return count;
 				}
-				//같은글자가 없으면
-				System.out.println(words[i]+"="+queue.contains(words[i]));
-				if(chech(now,words[i])&&queue.contains(words[i])){
-					System.out.println(chech(now,words[i]));
-					queue.remove(words[i]);
+				for (int i = 0; i < words.length; i++) {
+					if (chech(now, words[i]) && visited[i] == 0) {
+						visited[i] = 1;
+						queue.add(words[i]);
+					}
 				}
 			}
 			count++;
-			if (now.equals(target)){
-				break;
-			}
 		}
+		return 0; // 변환할 수 없는 경우
 	}
 	public static boolean chech(String begin, String target){
-		for(int i=0;i<begin.length();i++){
-			if (begin.charAt(i)==target.charAt(i)){
-				//같은 글자가 잇음
-				return false;
+		int diff = 0;
+		for (int i = 0; i < begin.length(); i++) {
+			if (begin.charAt(i) != target.charAt(i)) {
+				diff++;
 			}
 		}
-		return true;
+		return diff == 1; // 한 글자만 다른 경우 true 반환
 	}
 	public static void dfs(String begin){
 
