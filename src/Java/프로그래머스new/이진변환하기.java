@@ -20,7 +20,7 @@ public class 이진변환하기 {
 		while (true){
 			int insiceConut =0;
 			binaryConut++;
-			integerList.stream().forEach(i -> );
+
 			for (int i =0;i<s.length();i++){
 
 				if(s.charAt(i)== '1'){
@@ -34,7 +34,7 @@ public class 이진변환하기 {
 			ss = Integer.toBinaryString(Integer.parseInt(ss));
 			if(insiceConut<1){
 				break;
-			}*/
+			}
 		}
 
 		return answer;
