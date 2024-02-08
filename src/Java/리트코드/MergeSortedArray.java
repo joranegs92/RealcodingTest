@@ -37,6 +37,6 @@ public class MergeSortedArray {
 
 			System.out.println(nums1[i]);
 		}
-22
+
 	}
 }
