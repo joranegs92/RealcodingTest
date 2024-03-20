@@ -7,15 +7,33 @@ import java.util.Map;
 
 /*https://school.programmers.co.kr/learn/courses/30/lessons/178871*/
 public class 달리기경주 {
+
 	public static String[] solution(String[] players, String[] callings) {
+		String[] answer = {};
+		Map<String, Integer> map = new HashMap<>();
+		for(int i= 0; i<players.length;i++ ){
+			map.put(players[i],i);
+		}
+		for(String calling:callings){
+			Integer call = map.get(calling);
+			System.out.println(call);
+
+
+
+
+
+		}
+		return answer;
+	}
+/*	public static String[] solution(String[] players, String[] callings) {
 		String[] answer = {};
 
 		for(int j =0 ; j<callings.length;j++) {
-			String cal = callings[j];
+
 			for (int i = 0; i < players.length; i++) {
-				if(players[i].equals(cal)){
+				if(players[i].equals(callings[j])){
 					String name = players[i-1];
-					players[i-1]= cal;
+					players[i-1]= callings[j];;
 					players[i] = name;
 
 				}
@@ -24,7 +42,7 @@ public class 달리기경주 {
 		answer = players;
 
 		return answer;
-	}
+	}*/
 /*	public static String[] solution(String[] players, String[] callings) {
 		String[] answer = {};
 		Map<String,Integer> map = new HashMap<>();
