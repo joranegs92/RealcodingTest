@@ -4,30 +4,59 @@ package Java.프로그래머스new;
 public class 연속된수열의합 {
 	public static void main(String[] args) {
 
-		int[] sequence = {1,2,3,4,5};
-		int k = 7;
+		int[] sequence = {1, 1, 1, 2, 3, 4, 5};
+		int k = 5;
 		solution(sequence,k);
 	}
 	public static int[] solution(int[] sequence, int k) {
-		int[] answer = {};
+		int[] answer =  {-1, -1};
 
-		int sum = 0;
+
 		int start = 0;
 		int end = 0;
+		int rslnt = 0;//결과 길이
+		int minLength = Integer.MAX_VALUE;
+		int sum = 0;
 
-		while (end <= sequence.length) {
-			if (sum < k && end < sequence.length) {
-				sum += sequence[end++];
-			} else {
-				if (sum == k) {
-					System.out.println(start + " " + end);
-					break;
+		while (true) {
+			if (sum >= k) {//총합이 k보다 크거나 같을때
+				System.out.println(minLength);
+				if(sum == k && end - start < minLength){ //총합이 k랑 같고 길이가 더 짧을때
+					minLength = end - start;
+					answer[0] = start;
+					answer[1] = end;
+
 				}
+				sum -= sequence[start++];
+			} else {//총합이 k보다 작을때
+				if(end == sequence.length) break;
+				sum += sequence[end++];
 			}
 		}
-
-				return answer;
-
-		}
-
+		return answer;
 	}
+
+}
+
+/*		while (end<sequence.length){
+			int sum = 0;
+			for(int i =start;i<=end;i++){
+				sum += sequence[i];
+				if(sum < k){
+					end++;
+
+				}else if(sum > k){
+					start++;
+				}else if(sum == k){
+					if(rslnt< end- start){
+						rslnt = end - start;
+						answer[0] = start;
+						answer[1] = i;
+						break;
+					}
+				}
+			}
+		}*/
+
+
+
