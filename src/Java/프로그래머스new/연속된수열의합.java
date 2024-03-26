@@ -13,12 +13,37 @@ public class 연속된수열의합 {
 
 
 		int start = 0;
-		int end = 0;
+		int end = 1;
 		int rslnt = 0;//결과 길이
 		int minLength = Integer.MAX_VALUE;
-		int sum = 0;
+		int size = sequence.length;
 
-		while (true) {
+		int sum	= 0;
+		for(end = 0; end < sequence.length; end++){
+			sum += sequence[end];
+			while(sum > k){
+				sum -= sequence[start++];
+			}
+			if( sum == k) {
+				if (size > end - start){
+					size = end - start;
+					answer[0] = start;
+					answer[1] = end;
+				}else if( size == end - start){
+					answer[0] = Math.min(answer[0], start);
+					answer[1] = Math.min(answer[1], end);
+
+				}
+			}
+		}
+
+		return answer;
+	}
+
+}
+//	int sum = 0;
+
+		/*while (true) {
 			if (sum >= k) {//총합이 k보다 크거나 같을때
 				System.out.println(minLength);
 				if(sum == k && end - start < minLength){ //총합이 k랑 같고 길이가 더 짧을때
@@ -32,13 +57,8 @@ public class 연속된수열의합 {
 				if(end == sequence.length) break;
 				sum += sequence[end++];
 			}
-		}
-		return answer;
-	}
-
-}
-
-/*		while (end<sequence.length){
+		}*/
+		/*while (start<=end && end<sequence.length){
 			int sum = 0;
 			for(int i =start;i<=end;i++){
 				sum += sequence[i];
@@ -57,6 +77,7 @@ public class 연속된수열의합 {
 				}
 			}
 		}*/
+/*		*/
 
 
 
