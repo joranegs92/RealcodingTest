@@ -19,17 +19,17 @@ public class 연속된수열의합 {
 		int size = sequence.length;
 
 		int sum	= 0;
-		for(end = 0; end < sequence.length; end++){
-			sum += sequence[end];
-			while(sum > k){
-				sum -= sequence[start++];
+		for(end = 0; end < sequence.length; end++){ // end가 끝까지 갈때까지
+			sum += sequence[end];//end를 더해준다
+			while(sum > k){//sum이 k보다 클때
+				sum -= sequence[start++]; //start를 빼준다
 			}
-			if( sum == k) {
-				if (size > end - start){
+			if( sum == k) { //sum이 k랑 같을때
+				if (size > end - start){ //size가 end - start보다 클때
 					size = end - start;
 					answer[0] = start;
 					answer[1] = end;
-				}else if( size == end - start){
+				}else if( size == end - start){//size가 end - start랑 같을때
 					answer[0] = Math.min(answer[0], start);
 					answer[1] = Math.min(answer[1], end);
 
