@@ -2,6 +2,7 @@ package Java.프로그래머스new;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Stack;
 
 /*https://school.programmers.co.kr/learn/courses/30/lessons/176962*/
 public class 과제진행하기 {
@@ -38,10 +39,25 @@ public class 과제진행하기 {
 			int playtime = Integer.parseInt(plans[i][2]);
 
 			queue.add(new Task(name, time, playtime));
+		}
+		Stack<String> stack = new Stack<>();
 
+		while(!queue.isEmpty()){
+			Task tak = queue.poll();
+			int time = tak.start;
+			int playtime = tak.playtime;
+			String name = tak.name;
+			if(queue.isEmpty()){
+
+			}else {//queue가
+
+			}
 		}
 
 
+
+
+		//시간별로
 
 		for(Task element :queue){
 			System.out.println(element.name);
