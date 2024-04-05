@@ -42,15 +42,24 @@ public class 과제진행하기 {
 		}
 		Stack<String> stack = new Stack<>();
 
-		while(!queue.isEmpty()){
+		while(!queue.isEmpty()){ //queue가 비워질때까지 도는것
 			Task tak = queue.poll();
 			int time = tak.start;
 			int playtime = tak.playtime;
 			String name = tak.name;
-			if(queue.isEmpty()){
 
-			}else {//queue가
+			if(queue.isEmpty()){ // 새로운과제가 아직 남아있는경우
+				Task nestTask = queue.peek();
+				//새로운 과제를 시작할 시간이 되었을 때
+				if(time + playtime < nestTask.start){
 
+				}
+					//기존에 진행중이던 과제가 있을 때
+					//기존에 진행중이던 과제가 없을 때
+				// 새로운 과제를 시작하려고하는데
+
+			}else {// 과제 안남아있음
+				//
 			}
 		}
 
