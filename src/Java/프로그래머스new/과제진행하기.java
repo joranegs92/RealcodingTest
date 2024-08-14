@@ -41,6 +41,7 @@ public class 과제진행하기 {
 			queue.add(new Task(name, time, playtime));
 		}
 		Stack<String> stack = new Stack<>();
+		
 
 		while(!queue.isEmpty()){ //queue가 비워질때까지 도는것
 			Task tak = queue.poll();
